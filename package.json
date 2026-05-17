@@ -1,0 +1,64 @@
+{
+  "name": "reactpulse",
+  "version": "1.0.0",
+  "description": "A lightweight React code health scanner that detects anti-patterns and generates health scores",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "reactpulse": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "linter",
+    "health-check",
+    "code-quality",
+    "static-analysis",
+    "cli",
+    "developer-tools"
+  ],
+  "author": "gitstq",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitstq/reactpulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitstq/reactpulse/issues"
+  },
+  "homepage": "https://github.com/gitstq/reactpulse#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "@babel/types": "^7.24.0",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^12.0.0",
+    "glob": "^10.3.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "^7.20.6",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
